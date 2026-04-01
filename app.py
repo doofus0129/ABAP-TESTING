@@ -823,7 +823,7 @@ def execute_abap(code, test_input=''):
     i = 0
     while i < len(lines):
         line = lines[i].strip()
-        if not line or line.startswith('*'):
+        if not line or line.startswith('*') or line.startswith('"'):
             i += 1
             continue
         
